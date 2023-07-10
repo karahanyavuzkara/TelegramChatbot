@@ -17,6 +17,13 @@
       <artifactId>telegrambots</artifactId>
       <version>6.7.0</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.github.kshashov</groupId>
+      <artifactId>spring-boot-starter-telegram</artifactId>
+      <version>0.27</version>
+    </dependency>
+
   </dependencies>
 
 </project>
