@@ -81,17 +81,28 @@ public class simpleBot extends TelegramLongPollingBot {
         String command = update.getMessage().getText();
         String start = update.toString();
 
-        String message0 = "Here is a command list for you !" +
-                "/n" +
-                "/info : To get further information about Zodiacbot." +
-                "/n" +
-                "/run : It is just for testing the bot with a joke." +
-                "/n" +
-                "/convo : It is for starting a conversation.";
+        if (command.equals("/commands")) {
 
-        SendMessage startmsg = new SendMessage();
-        startmsg.setChatId(update.toString());
-        startmsg.setText(message0);
+            String message0 =  "Here is a command list for you!\n" +
+                    "/commands : To see the command list for the use of chatbot.\n" +
+                    "/info : To get further information about Zodiacbot.\n" +
+                    "/run : It is just for testing the bot with a joke.\n" +
+                    "/convo : It is for starting a conversation.\n" +
+                    "/quoteOTD : A random quote for today from Zodiac :)";
+
+
+            SendMessage response0 = new SendMessage();
+            response0.setChatId(update.getMessage().getChatId().toString());
+            response0.setText(message0);
+
+            try {
+                execute(response0);
+            }catch (TelegramApiException E) {
+                E.printStackTrace();
+
+            }
+
+        }
 
         if (command.equals("/run")) {
             String message = "Run, Forest Run !";
