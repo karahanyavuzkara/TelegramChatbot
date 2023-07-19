@@ -9,10 +9,68 @@ import java.io.Serializable;
 public class simpleBot extends TelegramLongPollingBot {
 
     private static final String[] quotesArray = {
-            "Quote 1",
-            "Quote 2",
-            "Quote 3",
-            // Add more quotes here...
+
+            "“Everything we see in the world is the creative work of women.”\n" +
+                    "― Mustafa Kemal Atatürk, Atatürk: First President and Founder of the Turkish Republic",
+
+
+            "“Teachers are the one and only people who save nations.”\n" +
+                    "― Mustafa Kemal Atatürk",
+
+
+            "“Peace at Home, Peace in the World”\n" +
+                    "― Mustafa Kemal Atatürk",
+
+
+           "“Our true mentor in life is science.”\n" +
+                    "― Mustafa Kemal Atatürk",
+
+
+           "“Dinlenmemek üzere yola çıkanlar asla yorulmazlar.”\n" +
+                   "― Mustafa Kemal Atatürk",
+
+
+
+         "“Büyük olmak için kimseye iltifat etmeyeceksin, hiç kimseyi aldatmayacaksın, ülke için gerçek amaç ne ise onu görecek ve o hedefe yürüyeceksin." +
+
+         "Herkes senin aleyhinde bulunacaktır, herkes seni yolundan çevirmeye çalışacaktır. " +
+         "Fakat sen buna karşı direneceksin, önüne sonsuz engeller de yığacaklardır; kendini büyük değil küçük, zayıf, araçsız, hiç sayarak, kimseden yardım gelmeyeceğine inanarak bu engelleri aşacaksın." +
+
+         "Bundan sonra da sana büyük derlerse, bunu söyleyenlere güleceksin.”\n" +
+            "― Mustafa Kemal Atatürk",
+
+
+         "“You have power over your mind - not outside events. Realize this, and you will find strength.”\n" +
+            "― Marcus Aurelius, Meditations ",
+
+
+         "“The happiness of your life depends upon the quality of your thoughts.”\n" +
+           "― Marcus Aurelius, Meditations",
+
+
+         "“Waste no more time arguing about what a good man should be. Be one.”\n" +
+            "― Marcus Aurelius, Meditations",
+
+
+         "“It is not death that a man should fear, but he should fear never beginning to live.”\n" +
+            "― Marcus Aurelius, Meditations",
+
+
+         "“Never let the future disturb you. You will meet it, if you have to, with the same weapons of reason which today arm you against the present.”\n" +
+           "― Marcus Aurelius, Meditations",
+
+
+         "“Whenever you are about to find fault with someone, ask yourself the following question: What fault of mine most nearly resembles the one I am about to criticize?”\n" +
+            "― Marcus Aurelius, Meditations",
+
+
+         "“How much more grievous are the consequences of anger than the causes of it.”\n" +
+            "― Marcus Aurelius, Meditations",
+
+
+         "“Do not act as if you were going to live ten thousand years. Death hangs over you. While you live, while it is in your power, be good.”\n" +
+            "― Marcus Aurelius"
+
     };
 
     @Override
