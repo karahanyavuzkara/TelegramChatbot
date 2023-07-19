@@ -80,10 +80,28 @@ public class simpleBot extends TelegramLongPollingBot {
                 E.printStackTrace();
             }
         }
+
         if (command.equals("/quoteOTD")) {
             String randomQuote = getRandomQuote();
             System.out.println(randomQuote);
+            SendMessage response4 = new SendMessage();
+            response4.setChatId(update.getMessage().getChatId().toString());
+            response4.setText(randomQuote);
+
+            try {
+                execute(response4);
+
+            } catch (TelegramApiException E) {
+                E.printStackTrace();
+
+            }
+
+
+
         }
+
+
+
     }
         private static String getRandomQuote() {
         Random random = new Random();
