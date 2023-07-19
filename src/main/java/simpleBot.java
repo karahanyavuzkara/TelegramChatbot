@@ -3,10 +3,18 @@ import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-
+import java.util.Random;
 import java.io.Serializable;
 
 public class simpleBot extends TelegramLongPollingBot {
+
+    private static final String[] quotesArray = {
+            "Quote 1",
+            "Quote 2",
+            "Quote 3",
+            // Add more quotes here...
+    };
+
     @Override
     public void onUpdateReceived(Update update) {
         System.out.println(update.getMessage().getText());
@@ -16,13 +24,13 @@ public class simpleBot extends TelegramLongPollingBot {
         String start = update.toString();
 
         String message0 = "Here is a command list for you !" +
-                           "/n"+
-                          "/info : To get further information about Zodiacbot."+
-                           "/n"+
-                          "/run : It is just for testing the bot with a joke."+
-                           "/n"+
-                          "/convo : It is for starting a conversation.";
-       
+                "/n" +
+                "/info : To get further information about Zodiacbot." +
+                "/n" +
+                "/run : It is just for testing the bot with a joke." +
+                "/n" +
+                "/convo : It is for starting a conversation.";
+
         SendMessage startmsg = new SendMessage();
         startmsg.setChatId(update.toString());
         startmsg.setText(message0);
@@ -72,7 +80,17 @@ public class simpleBot extends TelegramLongPollingBot {
                 E.printStackTrace();
             }
         }
+        if (command.equals("/quoteOTD")) {
+            String randomQuote = getRandomQuote();
+            System.out.println(randomQuote);
+        }
     }
+        private static String getRandomQuote() {
+        Random random = new Random();
+        int randomIndex = random.nextInt(quotesArray.length);
+        return quotesArray[randomIndex];
+        }
+
 
     @Override
     public String getBotUsername() {
